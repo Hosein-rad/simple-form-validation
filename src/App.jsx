@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./styles.css";
 
 function App() {
-  const [email, setEmail] = useState("test@test.com");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submit, setSubmit] = useState("");
 
@@ -31,9 +31,9 @@ function App() {
           className="input"
           type="email"
           id="email"
+          placeholder="Enter your Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
         <div
           className={`msg ${
@@ -56,9 +56,9 @@ function App() {
           className="input"
           type="password"
           id="password"
+          placeholder="Enter your Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
         <div
           className={`msg ${submit ? (pwValid ? "hidden" : null) : "hidden"}`}
